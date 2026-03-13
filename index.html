@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> MD Zahirul Islam Hridoy - CSE Student & Robotics Enthusiast</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap" rel="stylesheet" />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!-- Modal Structure -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <img id="modalImage" src="" alt="Project Preview" />
+    
+    <p id="modalDescription"></p>
+
+    <p><strong>Technologies:</strong> <span id="modalTech"></span></p>
+
+    <ul id="modalFeatures" class="features"></ul>
+
+    <p id="modalLearnings"></p>
+  </div>
+</div>
+
+
+<body>
+  <div id="particles-js"></div>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- <li><a href="resume.pdf" download class="resume-btn">Download Resume</a></li> -->
+      <li><button id="toggleMode" class="mode-toggle" title="Toggle Dark/Light Mode">🌙</button></li>
+    </ul>
+  </nav>
+
+  <header data-aos="fade-down" class="header-center">
+    <img src="HRidoy.jpeg" alt="MD Zahirul Islam Hridoy" class="profile-pic" />
+    <h1>
+      Hi, I'm MD Zahirul Islam Hridoy
+    </h1>
+    <span class="header-subtext">CSE Student & Robotics Enthusiast</span>
+
+    <div class="socials">
+      <a href="https://github.com/zi-hridoy" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/zi-hridoy" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/zahirul.islam.hridoy.2025/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </header>
+
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>About <span class="highlight">Me</span></h2>
+    <p>
+    I’m a Computer Science and Engineering student at the University of Asia Pacific 
+    with a strong passion for web development and robotics.
+    I’m skilled in HTML, CSS and SQL, and enjoy building interactive and efficient systems.
+    I’m always eager to learn new technologies and take on challenges 
+    that help me grow both technically and creatively.
+    </p>
+    <p>
+      Working with others inspires me and I enjoy contributing to meaningful
+      tech projects where I can make a difference.
+      My goal is to be part of innovative work that creates 
+      real-world impact and drives positive change through technology.
+    </p>
+  </section>
+
+  <section id="education" class="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="boxes">
+      <div class="box">
+        <h4>SSC - 2019</h4>
+        <p>Tejgaon Government High School</p>
+      </div>
+      <div class="box">
+        <h4>HSC - 2021</h4>
+        <p>Daffodil International College</p>
+      </div>
+      <div class="box">
+        <h4>University of Asia Pacific</h4>
+        <p>Bachelor of Science in Computer Science & Engineering (Ongoing)</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills" data-aos="fade-up">
+    <h2>My <span class="highlight">Skills</span></h2>
+    <div class="bars">
+      <div class="bar">
+        <span>HTML</span>
+        <div class="progress"><div style="width: 50%"></div></div>
+        <span>CSS</span>
+        <div class="progress"><div style="width: 45%"></div></div>
+        <span>SQL</span>
+        <div class="progress"><div style="width: 65%"></div></div>
+        
+      </div>
+      <div class="bar">
+      
+        <span>C++</span>
+        <div class="progress"><div style="width: 60%"></div></div>
+        <span>Python</span>
+        <div class="progress"><div style="width: 70%"></div></div>
+        <span>C</span>
+        <div class="progress"><div style="width: 85%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" data-aos="fade-up">
+  <h2>My <span class="highlight">Projects</span></h2>
+  <div class="boxes">
+
+    <div class="box project" onclick="openModal(
+      'Advanced Line Follower Robot',
+      'images/line-follower.png',
+      'An advanced robot that follows lines using real-time PID corrections.',
+      'Arduino, C, IR Sensors, PID',
+      ['✅ Real-time PID control', '⚡ Speed optimization', '🔌 Low power usage'],
+      'Learned to tune PID and handle sensor data accurately in real-world conditions.'
+    )">
+      <img src="line follower.jpg" alt="Line Follower Robot" class="project-img" />
+      <h4>Advance Line Follower Robot</h4>
+      <p>An advanced line follower robot using PID algorithm.</p>
+      <a href="javascript:void(0)">View Project</a>
+    </div>
+
+
+
+    <div class="box project" onclick="openModal(
+      'Soccer Game Simulator',
+      'images/soccer-game.png',
+      'A soccer game simulation project with team strategies and match animations.',
+      'Python, Pygame, OOP Concepts',
+      ['⚽ Real-time player movement', '🧠 Strategy-based AI teams', '🎮 Match animation and scoring', '📊 Stats tracking'],
+      'This project helped me practice object-oriented design, collision logic, and graphical game development using Pygame.'
+    )">
+      <img src="Robo soccer.jpg" alt="Soccer Project" class="project-img" />
+      <h4>Soccer Game</h4>
+      <p>A fun soccer game built using Pygame.</p>
+      <a href="javascript:void(0)">View Project</a>
+    </div> 
+
+    <div class="box project" onclick="openModal(
+      'Portfolio Website',
+      'images/portfolio-preview.png',
+      'A responsive portfolio website designed to showcase my personal and academic projects.',
+      'HTML, CSS, JavaScript, AOS, Particles.js',
+      ['🌐 Fully responsive layout', '🌓 Light/Dark mode toggle', '⚛️ AOS animations', '🎨 Clean UI with custom theme'],
+      'Built my own portfolio from scratch and learned how to structure, style, and animate a modern personal website.'
+    )">
+     
+      <h4>Portfolio Website</h4>
+      <p>A responsive personal website to showcase my work.</p>
+      <a href="javascript:void(0)">View Project</a>
+    </div>
+
+
+  </div>
+</section>
+
+  <section id="hobbies" class="hobbies" data-aos="fade-up">
+  <h2>My <span class="highlight">Hobbies</span></h2>
+  <div class="boxes">
+    <div class="box">
+      <h4>Robotics</h4>
+      <p>I enjoy building and experimenting with robotic systems in my free time.</p>
+    </div>
+    <div class="box">
+      <h4>Watching Movies</h4>
+      <p>I used to like watching movies and webseries in my free time</p>
+    </div>
+    <div class="box">
+      <h4>Gaming</h4>
+      <p>I love strategic and puzzle games that challenge my thinking.</p>
+    </div>
+    <div class="box">
+      <h4>Reading Tech Articles</h4>
+      <p>Staying updated with the latest in tech and robotics excites me.</p>
+    </div>
+  </div>
+
+</section>
+
+  
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2 class="section-title">Contact Me!</h2>
+
+<div class="contact-box">
+  <p><i class="fa fa-envelope"></i> <a href="mailto:onindoniloy2002@gmail.com">onindoniloy2002@gmail.com</a></p>
+  <p><i class="fa fa-phone"></i> <a href="tel:+8801983126864">+8801983126864</a></p>
+  <p><i class="fa fa-map-marker"></i> <a href="https://maps.app.goo.gl/P689mU2dHcWr8A539" target="_blank" rel="noopener noreferrer">Azimpur,Dhaka</a></p>
+</div>
+
+</div>
+
+  </div>
+</div>
+
+
+    <form action="https://formspree.io/f/{your-id}" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="phone" placeholder="Mobile Number" />
+      <input type="text" name="subject" placeholder="Email Subject" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2025 by Onindo Dey Niloy. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: '#ff9900' },
+        opacity: { value: 0.7 },
+        move: { enable: true, speed: 1, direction: 'none', random: true }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      }
+    });
+  </script>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+    });
+  </script>
+
+  <script>
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalImage = document.getElementById("modalImage");
+  const modalDescription = document.getElementById("modalDescription");
+  const modalTech = document.getElementById("modalTech");
+  const modalFeatures = document.getElementById("modalFeatures");
+  const modalLearnings = document.getElementById("modalLearnings");
+  const closeBtn = document.querySelector(".close-btn");
+
+  function openModal(title, imgSrc, description, techUsed, features, learnings) {
+    modalTitle.textContent = title;
+    modalImage.src = imgSrc;
+    modalDescription.textContent = description;
+    modalTech.textContent = techUsed;
+    modalLearnings.textContent = learnings;
+
+    modalFeatures.innerHTML = '';
+    features.forEach(feature => {
+      const li = document.createElement('li');
+      li.textContent = feature;
+      modalFeatures.appendChild(li);
+    });
+
+    modal.style.display = "flex";
+  }
+
+  // ✅ Close when clicking ❌
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  // ✅ Close when clicking outside modal content
+  window.onclick = (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
+</body>
+</html>
